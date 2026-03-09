@@ -1,0 +1,88 @@
+<![CDATA[/* Dark Theme */
+body {
+    background-color: #121212;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.dashboard {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+.metrics .metric {
+    background: #1e1e1e;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+.bar {
+    height: 20px;
+    background: #333;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+.fill {
+    height: 100%;
+    background: #4caf50;
+    width: 0%;
+    transition: width 0.5s ease-in-out;
+}
+
+.services .service {
+    background: #1e1e1e;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.status-indicator {\n    width: 20px;\n    height: 20px;\n    border-radius: 50%;\n    transition: background-color 0.5s ease;\n}
+
+.green { background: #4caf50; }
+.yellow { background: #ffeb3b; }
+.red { background: #f44336; }
+
+.logs {
+    background: #1e1e1e;
+    padding: 10px;
+    border-radius: 8px;
+    grid-column: span 2; /* Span across columns on larger screens */
+}
+
+#logStream {
+    height: 200px;
+    overflow-y: auto;
+    background: #000;
+    padding: 10px;
+    font-family: monospace;
+    white-space: pre-wrap;
+}
+
+.alerts {
+    background: #1e1e1e;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#alertList li {
+    background: #333;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 4px;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {\n    .dashboard {\n        grid-template-columns: 1fr;\n    }\n    \n    .logs {\n        grid-column: span 1;\n    }\n    \n    #logStream {\n        height: 150px;\n    }\n}\n\n/* Animations */\n@keyframes fadeIn {\n    from { opacity: 0; }\n    to { opacity: 1; }\n}\n\n#logStream p {\n    animation: fadeIn 0.5s;\n    margin: 5px 0;\n}\n\n#alertList li {\n    animation: fadeIn 0.5s;\n}\n\n/* Final styling */\nsection {\n    box-shadow: 0 4px 8px rgba(0,0,0,0.3);\n    transition: box-shadow 0.3s;\n}\n\nsection:hover {\n    box-shadow: 0 8px 16px rgba(0,0,0,0.5);\n}]]>

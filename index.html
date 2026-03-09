@@ -1,0 +1,57 @@
+<![CDATA[<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Monitoring Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="dashboard">
+        <h1>Monitoring Dashboard</h1>
+        
+        <section class="metrics">
+            <h2>System Metrics</h2>
+            <div class="metric">
+                <label>CPU Usage</label>
+                <div class="bar"><div id="cpuFill" class="fill"></div></div>
+                <span id="cpuValue">0%</span>
+            </div>
+            <div class="metric">
+                <label>Memory Usage</label>
+                <div class="bar"><div id="memoryFill" class="fill"></div></div>
+                <span id="memoryValue">0%</span>
+            </div>
+            <div class="metric">
+                <label>Disk Usage</label>
+                <div class="bar"><div id="diskFill" class="fill"></div></div>
+                <span id="diskValue">0%</span>
+            </div>
+        </section>
+        
+        <section class="services">
+            <h2>Service Status</h2>
+            <div class="service" id="apiService">
+                API: <span class="status-indicator"></span>
+            </div>
+            <div class="service" id="dbService">
+                Database: <span class="status-indicator"></span>
+            </div>
+            <div class="service" id="cacheService">
+                Cache: <span class="status-indicator"></span>
+            </div>
+        </section>
+        
+        <section class="logs">
+            <h2>Log Stream</h2>
+            <div id="logStream"></div>
+        </section>
+        
+        <section class="alerts">
+            <h2>Alerts</h2>
+            <ul id="alertList"></ul>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>]]>
